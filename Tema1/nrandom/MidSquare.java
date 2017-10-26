@@ -21,7 +21,7 @@ public class MidSquare implements Generator {
 	int nr2 = (int) (nr % Math.pow(10, lenght/2));
         
 	if(LengthNr(nr2) < LengthNr(seed)) {
-		nr2 = ChangeLenght(nr2);
+		nr2 = ChangeLength(nr2);
 	}
 		
 	seed = nr2;		        
@@ -32,7 +32,7 @@ public class MidSquare implements Generator {
 	return new Integer(n).toString().length();
     }
     
-    private int ChangeLenght(int nr2) {
+    private int ChangeLength(int nr2) {
 	while(LengthNr(nr2) < LengthNr(seed)) {
 		nr2 = nr2 * 10 + 1;
 	}
