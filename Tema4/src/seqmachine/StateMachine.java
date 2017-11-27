@@ -8,16 +8,8 @@ import java.util.HashMap;
 
 public abstract class StateMachine {
 	int currentState;
-	public HashMap<Integer, HashMap<Integer, Integer>> transitionTable;
+	public HashMap<Integer, HashMap<Integer, Integer>> transitionTable = new HashMap<Integer, HashMap<Integer, Integer>>();
 	
-	
-    public void run() 
-    {}
-	
-	
-	public void Transition(int action)
-	{
-		currentState = action;
-	}
+	public abstract void run();	
 	
 } 
