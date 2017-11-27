@@ -7,8 +7,7 @@ public class CoffeeMachine extends StateMachine {
 
     CoffeeMachine()
     {		
-	transitionTable = new HashMap<Integer, HashMap<Integer, Integer>>();
-		
+	    
 	HashMap<Integer, Integer> state0 = new HashMap<Integer, Integer>();
 	HashMap<Integer, Integer> state5 = new HashMap<Integer, Integer>();
 	HashMap<Integer, Integer> state10 = new HashMap<Integer, Integer>();
@@ -33,10 +32,11 @@ public class CoffeeMachine extends StateMachine {
     public void run()
     {
 	Scanner scanner = new Scanner(System.in);
+	boolean running = true;
 	int action;
         int option;
 
-	while(true)
+	while(running)
 	{
             System.out.println("Credit: " + currentState);
             System.out.println("Introduceti bancnote: ");
